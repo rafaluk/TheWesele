@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
-//    final int WEDDING_TIME = 1502557200000;
+    long WEDDING_TIME = 1502557200; //co to za typ? double? float?
     Button details_button;
     Button contact_button;
     TextView days;
@@ -45,21 +45,24 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-        new CountDownTimer(30000, 1000) {
 
+       // Calendar.getInstance().getTimeInMillis(); - to chyba zwróci czas
+
+        new CountDownTimer(30000, 1000) {
+            //TODO zamiast 30000 wstawic roznice: slub-dzis. slub na gorze.
             public void onTick(long millisUntilFinished) {
-                seconds.setText(""+millisUntilFinished / 1000);
+                seconds.setText(""+(millisUntilFinished/1000)%60);
             }
 
             public void onFinish() {
-                seconds.setText("done!");
+                seconds.setText("Zaczęło się! :)");
             }
         }.start();
     }
 
 
 //    public void countTime() {
-//        long msDiff = Calendar.getInstance().getTimeInMillis() - WEDDING_TIME;
+       // long msDiff = Calendar.getInstance().getTimeInMillis();
 //        long daysDiff = TimeUnit.MILLISECONDS.toDays(msDiff);
 //    }
 
