@@ -3,16 +3,18 @@ package com.example.rafalklat.thewesele;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
-    long WEDDING_TIME = 1502557200; //co to za typ? double? float?
+//    float WEDDING_TIME = 1512748800000;
     Button details_button;
     Button contact_button;
     TextView days;
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         minutes = (TextView) findViewById(R.id.minutes);
         seconds = (TextView) findViewById(R.id.seconds);
 
+        details_button = (Button) findViewById(R.id.details_button);
+        contact_button = (Button) findViewById(R.id.contact_button);
 
         details_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-
-       // Calendar.getInstance().getTimeInMillis(); - to chyba zwróci czas
-
-        new CountDownTimer(30000, 1000) {
-            //TODO zamiast 30000 wstawic roznice: slub-dzis. slub na gorze.
+        
+        new CountDownTimer(1502550000000L-Calendar.getInstance().getTimeInMillis(), 1000) {
             public void onTick(long millisUntilFinished) {
+                days.setText(""+(millisUntilFinished/1000/60/60/24));
+                hours.setText(""+(millisUntilFinished/1000/60/60)%24);
+                minutes.setText(""+(millisUntilFinished/1000/60)%60);
                 seconds.setText(""+(millisUntilFinished/1000)%60);
             }
 
@@ -59,14 +63,4 @@ public class MainActivity extends AppCompatActivity {
             }
         }.start();
     }
-
-
-//    public void countTime() {
-       // long msDiff = Calendar.getInstance().getTimeInMillis();
-//        long daysDiff = TimeUnit.MILLISECONDS.toDays(msDiff);
-//    }
-
-
-
-
 }
