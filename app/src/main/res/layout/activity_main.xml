@@ -5,8 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.rafalklat.thewesele.MainActivity">
-
+    tools:context="com.example.rafalklat.thewesele.MainActivity"
+    >
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:scaleType="centerCrop"
+    android:src="@drawable/tomy"/>
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -22,8 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="3">
-
-
+            
             <TextView
                 android:id="@+id/doslubu"
                 android:layout_width="wrap_content"
@@ -31,7 +35,8 @@
                 android:layout_centerHorizontal="true"
                 android:text="DO WESELA"
                 android:layout_marginTop="15dp"
-                android:textSize="30dp"/>
+                android:textSize="30dp"
+                style="@style/Counter"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -40,7 +45,8 @@
                 android:text="POZOSTAŁO:"
                 android:layout_margin="10dp"
                 android:layout_marginTop="20dp"
-                android:textSize="40dp"/>
+                android:textSize="40dp"
+                style="@style/Counter"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -59,6 +65,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:textSize="80dp"
+                style="@style/Counter"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -68,7 +75,8 @@
                 android:layout_alignBaseline="@+id/days"
                 android:layout_alignBottom="@+id/days"
                 android:layout_toRightOf="@+id/days"
-                android:layout_toEndOf="@+id/days" />
+                android:layout_toEndOf="@+id/days"
+                style="@style/Counter"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -87,6 +95,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:textSize="80dp"
+                style="@style/Counter"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -96,7 +105,8 @@
                 android:layout_alignBaseline="@+id/hours"
                 android:layout_alignBottom="@+id/hours"
                 android:layout_toRightOf="@+id/hours"
-                android:layout_toEndOf="@+id/hours" />
+                android:layout_toEndOf="@+id/hours"
+                style="@style/Counter"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -115,6 +125,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:textSize="80dp"
+                style="@style/Counter"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -124,7 +135,8 @@
                 android:layout_alignBaseline="@+id/minutes"
                 android:layout_alignBottom="@+id/minutes"
                 android:layout_toRightOf="@+id/minutes"
-                android:layout_toEndOf="@+id/minutes" />
+                android:layout_toEndOf="@+id/minutes"
+                style="@style/Counter"/>
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/sekundy"
@@ -142,6 +154,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:textSize="80dp"
+                style="@style/Counter"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -151,7 +164,8 @@
                 android:layout_alignBaseline="@+id/seconds"
                 android:layout_alignBottom="@+id/seconds"
                 android:layout_toRightOf="@+id/seconds"
-                android:layout_toEndOf="@+id/seconds" />
+                android:layout_toEndOf="@+id/seconds"
+                style="@style/Counter"/>
         </RelativeLayout>
 
         <LinearLayout
@@ -167,13 +181,15 @@
                 android:text="szczegóły imprezy"
                 android:layout_width="0dp"
                 android:layout_weight="2"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                style="@style/Fuksja"/>
             <Button
                 android:id="@+id/contact_button"
                 android:text="kontakt z nami"
                 android:layout_width="0dp"
                 android:layout_weight="2"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                style="@style/Fuksja"/>
         </LinearLayout>
     </LinearLayout>
 

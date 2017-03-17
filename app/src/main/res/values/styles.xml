@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Counter" parent="AppTheme">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Fuksja" parent="Widget.AppCompat.Button">
+        <item name="android:background">#EC407A</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
 </resources>
