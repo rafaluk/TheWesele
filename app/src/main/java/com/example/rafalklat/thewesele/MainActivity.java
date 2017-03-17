@@ -1,6 +1,7 @@
 package com.example.rafalklat.thewesele;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.CountDownTimer;
@@ -51,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
         contact_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO przekierowanie do aktywnosci kontakt
+                Intent myIntent = new Intent(MainActivity.this, ContactActivity.class);
+                MainActivity.this.startActivity(myIntent);
             }
 
         });
