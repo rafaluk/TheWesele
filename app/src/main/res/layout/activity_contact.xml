@@ -8,11 +8,18 @@
     tools:context="com.example.rafalklat.thewesele.ContactActivity">
 
     <RelativeLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pytania? Wątpliwości? Życzenia? "
+            android:layout_centerHorizontal="true"
+            android:textSize="12sp"
+            android:textColor="#e06"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,6 +28,15 @@
             android:layout_centerHorizontal="true"
             android:textSize="30sp"
             android:textColor="#e06"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pomysły? Rady małżeńskie? Smutki?"
+            android:textSize="12sp"
+            android:textColor="#e06"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
     <LinearLayout
@@ -41,7 +57,9 @@
                 android:text="Zadzwoń..."
                 android:textSize="25sp"
                 android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:textColor="#35f"
+                />
 
         </RelativeLayout>
         <LinearLayout
@@ -57,25 +75,24 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/asini"
-                    android:scaleX="0.8"
-                    android:scaleY="0.8"
-                    android:id="@+id/asiniTel"
+                    android:src="@drawable/ic_phone"
+                    android:id="@+id/imageView4"
+                    android:layout_marginLeft="54dp"
+                    android:layout_marginStart="54dp"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="13dp" />
+                    android:layout_alignParentStart="true" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_phone"
-                    android:id="@+id/imageView4"
-                    android:layout_marginLeft="33dp"
-                    android:layout_marginStart="33dp"
-                    android:layout_alignBottom="@+id/asiniTel"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                    android:src="@drawable/asini"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:id="@+id/asiniTel"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
             <RelativeLayout
@@ -84,23 +101,23 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:id="@+id/rafiniTel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/rafini"
-                    android:scaleX="0.8"
-                    android:scaleY="0.8"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="16dp" />
-                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_phone"
                     android:layout_marginLeft="33dp"
                     android:layout_marginStart="33dp"
                     android:layout_alignBottom="@+id/rafiniTel"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <ImageView
+                    android:id="@+id/rafiniTel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rafini"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true" />
             </RelativeLayout>
@@ -124,7 +141,8 @@
                 android:text="...albo napisz :)"
                 android:textSize="25sp"
                 android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:textColor="#35f"/>
 
 
         </RelativeLayout>
@@ -140,19 +158,6 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:id="@+id/asiniMail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/asini"
-                    android:scaleX="0.8"
-                    android:scaleY="0.8"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="13dp"
-                    />
-
-                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/ic_mail_red"
@@ -162,6 +167,19 @@
                     android:layout_alignBottom="@+id/asiniMail"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true" />
+
+                <ImageView
+                    android:id="@+id/asiniMail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/asini"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignLeft="@+id/imageView"
+                    android:layout_alignStart="@+id/imageView"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginStart="14dp" />
             </RelativeLayout>
 
             <RelativeLayout
