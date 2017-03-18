@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
         details_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO przekierowanie do aktywnosci szczegoly
-            }
+                Intent myIntent = new Intent(MainActivity.this, DetailsActivity.class);
+                MainActivity.this.startActivity(myIntent);            }
         });
 
         contact_button.setOnClickListener(new View.OnClickListener() {

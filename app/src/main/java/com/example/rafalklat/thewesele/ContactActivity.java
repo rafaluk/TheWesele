@@ -15,6 +15,7 @@ public class ContactActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Button back = (Button) findViewById(R.id.back);
         ImageView asiniTel = (ImageView) findViewById(R.id.asiniTel);
