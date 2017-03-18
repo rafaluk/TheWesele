@@ -18,7 +18,6 @@ import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
-//    float WEDDING_TIME = 1512748800000;
     Button details_button;
     Button contact_button;
     TextView days;
@@ -30,9 +29,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        ActionBar bar = getActionBar();
-//        bar.setBackgroundDrawable(new ColorDrawable(Color.RED));
 
         days = (TextView) findViewById(R.id.days);
         hours = (TextView) findViewById(R.id.hours);
