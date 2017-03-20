@@ -67,60 +67,73 @@
             android:layout_height="0dp"
             android:orientation="horizontal"
             android:layout_weight="4">
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_phone"
-                    android:id="@+id/imageView4"
-                    android:layout_marginLeft="54dp"
-                    android:layout_marginStart="54dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/asini"
-                    android:scaleX="0.8"
-                    android:scaleY="0.8"
-                    android:id="@+id/asiniTel"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/asini"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:id="@+id/asiniTel"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
 
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_phone"
+                        android:id="@+id/leftTel"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_phone"
-                    android:layout_marginLeft="33dp"
-                    android:layout_marginStart="33dp"
-                    android:layout_alignBottom="@+id/rafiniTel"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
 
-                <ImageView
-                    android:id="@+id/rafiniTel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/rafini"
-                    android:scaleX="0.8"
-                    android:scaleY="0.8"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
-            </RelativeLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_phone"
+                        android:id="@+id/rightTel"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:id="@+id/rafiniTel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/rafini"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
@@ -135,7 +148,6 @@
             android:layout_height="0dp"
             android:layout_weight="2"
             android:orientation="vertical">
-
             <TextView
                 android:id="@+id/napisz"
                 android:layout_width="wrap_content"
@@ -145,8 +157,6 @@
                 android:text="...albo napisz :)"
                 android:textColor="#35f"
                 android:textSize="25sp" />
-
-
         </RelativeLayout>
 
         <LinearLayout
@@ -154,12 +164,15 @@
             android:layout_height="0dp"
             android:layout_weight="4"
             android:orientation="horizontal">
-
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
-
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
                 <ImageView
                     android:id="@+id/asiniMail"
                     android:layout_width="wrap_content"
@@ -170,21 +183,25 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true" />
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/ic_mail_red"
+                    android:id="@+id/leftMail"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignLeft="@+id/asiniMail"
-                    android:layout_alignStart="@+id/asiniMail"
-                    android:layout_marginLeft="21dp"
-                    android:layout_marginStart="21dp" />
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
             </RelativeLayout>
-
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
 
                 <ImageView
                     android:id="@+id/rafiniMail"
@@ -193,18 +210,24 @@
                     android:scaleX="0.8"
                     android:scaleY="0.8"
                     android:src="@drawable/rafini"
-                    android:layout_alignParentBottom="true" />
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/rafiniMail"
+                    android:src="@mipmap/ic_mail_red"
+                    android:id="@+id/rightMail"
+                    android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginLeft="14dp"
-                    android:layout_marginStart="14dp"
-                    android:src="@mipmap/ic_mail_red" />
+                    android:layout_alignParentStart="true" />
             </RelativeLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
