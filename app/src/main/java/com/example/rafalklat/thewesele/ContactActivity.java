@@ -16,7 +16,8 @@ public class ContactActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
-       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+      //  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Toolbar actionBar = (Toolbar) findViewById(R.id.actionBar);
         setSupportActionBar(actionBar);
 
