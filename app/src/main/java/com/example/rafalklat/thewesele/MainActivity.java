@@ -2,20 +2,15 @@ package com.example.rafalklat.thewesele;
 
 import android.app.ActionBar;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Calendar;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     TextView hours;
     TextView minutes;
     TextView seconds;
+
+    final long WEDDING_TIME = 1502550000000L;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +55,9 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        new CountDownTimer(1502550000000L-Calendar.getInstance().getTimeInMillis(), 1000) {
+        new CountDownTimer(WEDDING_TIME-Calendar.getInstance().getTimeInMillis(), 1000) {
             public void onTick(long millisUntilFinished) {
+                //TODO zamienic na miesiace, a nie dni
                 days.setText(""+(millisUntilFinished/1000/60/60/24));
                 hours.setText(""+(millisUntilFinished/1000/60/60)%24);
                 minutes.setText(""+(millisUntilFinished/1000/60)%60);

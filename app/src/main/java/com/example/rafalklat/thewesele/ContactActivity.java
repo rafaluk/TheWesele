@@ -32,6 +32,8 @@ public class ContactActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        //TODO telefony też jakos publicznie pobierac z main activity
         asiniTel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,6 +50,7 @@ public class ContactActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //TODO datę jakoś publicznie pobierac z main activity
         asiniMail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
