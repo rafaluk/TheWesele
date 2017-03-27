@@ -3,6 +3,11 @@ package com.example.rafalklat.thewesele;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.os.CountDownTimer;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -14,14 +19,9 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button details_button;
-    Button contact_button;
-    TextView days;
-    TextView hours;
-    TextView minutes;
-    TextView seconds;
 
-    final long WEDDING_TIME = 1502550000000L;
+    private SectionsPagerAdapter mSectionsPagerAdapter;
+    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,43 +30,62 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar actionBar = (Toolbar) findViewById(R.id.actionBar);
         setSupportActionBar(actionBar);
+        // getSupportActionBar().setLogo(R.mipmap.ic_launcher);
 
-        days = (TextView) findViewById(R.id.days);
-        hours = (TextView) findViewById(R.id.hours);
-        minutes = (TextView) findViewById(R.id.minutes);
-        seconds = (TextView) findViewById(R.id.seconds);
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        details_button = (Button) findViewById(R.id.details_button);
-        contact_button = (Button) findViewById(R.id.contact_button);
+        // Set up the ViewPager with the sections adapter.
+        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        details_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(MainActivity.this, DetailsActivity.class);
-                MainActivity.this.startActivity(myIntent);            }
-        });
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
 
-        contact_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(MainActivity.this, ContactActivity.class);
-                MainActivity.this.startActivity(myIntent);
+
+    }
+
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+        public SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    //TODO refactor nazw
+                    MainFragment tab1Fragment = new MainFragment();
+                    return tab1Fragment;
+                case 1:
+                    ContactFragment tab2Fragment = new ContactFragment();
+                    return tab2Fragment;
+                case 2:
+                    DetailsFragment tab3Fragment = new DetailsFragment();
+                    return tab3Fragment;
+                default:
+                    return null;
             }
+        }
 
-        });
+        @Override
+        public int getCount() {
+            // Show 3 total pages.
+            return 3;
+        }
 
-        new CountDownTimer(WEDDING_TIME-Calendar.getInstance().getTimeInMillis(), 1000) {
-            public void onTick(long millisUntilFinished) {
-                //TODO zamienic na miesiace, a nie dni
-                days.setText(""+(millisUntilFinished/1000/60/60/24));
-                hours.setText(""+(millisUntilFinished/1000/60/60)%24);
-                minutes.setText(""+(millisUntilFinished/1000/60)%60);
-                seconds.setText(""+(millisUntilFinished/1000)%60);
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position) {
+                case 0:
+                    //TODO nazwy sekcji
+                    return "SECTION 1";
+                case 1:
+                    return "SECTION 2";
+                case 2:
+                    return "SECTION 3";
             }
-
-            public void onFinish() {
-                seconds.setText("Zaczęło się! :)");
-            }
-        }.start();
+            return null;
+        }
     }
 }
