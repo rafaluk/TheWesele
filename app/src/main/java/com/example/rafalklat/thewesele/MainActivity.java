@@ -2,6 +2,7 @@ package com.example.rafalklat.thewesele;
 
 import android.app.ActionBar;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -30,18 +31,17 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar actionBar = (Toolbar) findViewById(R.id.actionBar);
         setSupportActionBar(actionBar);
+        actionBar.setLogo(R.mipmap.ic_launcher);
+        //actionBar.setBackgroundColor(Color.parseColor("#EC407A"));
         // getSupportActionBar().setLogo(R.mipmap.ic_launcher);
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
-
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
@@ -57,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
                     MainFragment mainFragment = new MainFragment();
                     return mainFragment;
                 case 1:
-                    ContactFragment contactFragment = new ContactFragment();
-                    return contactFragment;
-                case 2:
                     DetailsFragment detailsFragment = new DetailsFragment();
                     return detailsFragment;
+                case 2:
+                   ContactFragment contactFragment = new ContactFragment();
+                   return contactFragment;
                 default:
                     return null;
             }
@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
             return 3;
         }
 

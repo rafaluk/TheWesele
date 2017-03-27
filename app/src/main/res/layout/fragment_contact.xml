@@ -6,8 +6,7 @@
     android:id="@+id/activity_contact"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.rafalklat.thewesele.ContactActivity">
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_marginTop="10dp"

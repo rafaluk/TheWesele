@@ -31,7 +31,7 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //// TODO: PRZEBUDOWAĆ CAŁY WIDOK
+        // TODO: PRZEBUDOWAĆ CAŁY WIDOK
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
         days = (TextView) rootView.findViewById(R.id.days);
@@ -49,6 +49,7 @@ public class MainFragment extends Fragment {
             }
 
             public void onFinish() {
+                //TODO tutaj lepiej obsluzyc
                 seconds.setText("Zaczęło się! :)");
             }
         }.start();
