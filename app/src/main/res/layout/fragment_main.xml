@@ -50,7 +50,6 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/miesiecy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -77,7 +76,6 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/dni"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -95,15 +93,14 @@
                     style="@style/CountDown.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/months"
-                    android:layout_alignBottom="@+id/months"
-                    android:layout_toEndOf="@+id/months"
-                    android:layout_toRightOf="@+id/months"
+                    android:layout_alignBaseline="@+id/days"
+                    android:layout_alignBottom="@+id/days"
+                    android:layout_toEndOf="@+id/days"
+                    android:layout_toRightOf="@+id/days"
                     android:text="d" />
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/godziny"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -129,7 +126,6 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/minuty"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -155,7 +151,6 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/sekundy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
