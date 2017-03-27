@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
-            android:src="@drawable/tomy" />
+            android:src="@drawable/tulipy" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,165 +30,157 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/doslubu"
-                    style="@style/Counter"
+                    style="@style/Titel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
-                    android:text="DO WESELA"
-                    android:textSize="30dp" />
+                    android:text="Asia i Rafał" />
 
                 <TextView
-                    style="@style/Counter"
+                    style="@style/Titel.Sub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/doslubu"
                     android:layout_centerHorizontal="true"
-                    android:layout_margin="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="POZOSTAŁO:"
-                    android:textSize="40dp" />
+                    android:text="ślubują już za:" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/miesiecy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/months"
+                    style="@style/CountDown.Big"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="2" />
+
+                <TextView
+                    style="@style/CountDown.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/months"
+                    android:layout_alignBottom="@+id/months"
+                    android:layout_toEndOf="@+id/months"
+                    android:layout_toRightOf="@+id/months"
+                    android:text="mc" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/dni"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:orientation="horizontal"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="0dp">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/days"
-                    style="@style/Counter"
+                    style="@style/CountDown.Big"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:text="30"
-                    android:textSize="80dp" />
+                    android:text="30" />
 
                 <TextView
-                    style="@style/Counter"
+                    style="@style/CountDown.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/days"
-                    android:layout_alignBottom="@+id/days"
-                    android:layout_toEndOf="@+id/days"
-                    android:layout_toRightOf="@+id/days"
-                    android:text="d"
-                    android:textSize="30dp" />
+                    android:layout_alignBaseline="@+id/months"
+                    android:layout_alignBottom="@+id/months"
+                    android:layout_toEndOf="@+id/months"
+                    android:layout_toRightOf="@+id/months"
+                    android:text="d" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/godziny"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:orientation="horizontal"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="0dp">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/hours"
-                    style="@style/Counter"
+                    style="@style/CountDown.Big"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:text="13"
-                    android:textSize="80dp" />
+                    android:text="13" />
 
                 <TextView
-                    style="@style/Counter"
+                    style="@style/CountDown.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@+id/hours"
                     android:layout_alignBottom="@+id/hours"
                     android:layout_toEndOf="@+id/hours"
                     android:layout_toRightOf="@+id/hours"
-                    android:text="h"
-                    android:textSize="30dp" />
+                    android:text="h" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/minuty"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:orientation="horizontal"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="0dp">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/minutes"
-                    style="@style/Counter"
+                    style="@style/CountDown.Big"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:text="52"
-                    android:textSize="80dp" />
+                    android:text="52" />
 
                 <TextView
-                    style="@style/Counter"
+                    style="@style/CountDown.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@+id/minutes"
                     android:layout_alignBottom="@+id/minutes"
                     android:layout_toEndOf="@+id/minutes"
                     android:layout_toRightOf="@+id/minutes"
-                    android:text="m"
-                    android:textSize="30dp" />
+                    android:text="m" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/sekundy"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="0dp">
 
                 <TextView
                     android:id="@+id/seconds"
-                    style="@style/Counter"
+                    style="@style/CountDown.Big"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:text="42"
-                    android:textSize="80dp" />
+                    android:text="42" />
 
                 <TextView
-                    style="@style/Counter"
+                    style="@style/CountDown.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@+id/seconds"
                     android:layout_alignBottom="@+id/seconds"
                     android:layout_toEndOf="@+id/seconds"
                     android:layout_toRightOf="@+id/seconds"
-                    android:text="s"
-                    android:textSize="30dp" />
+                    android:text="s" />
             </RelativeLayout>
-
-            <LinearLayout
-                android:id="@+id/buttons"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="0dp">
-
-            </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
-</android.support.v4.widget.NestedScrollView>
+</LinearLayout>

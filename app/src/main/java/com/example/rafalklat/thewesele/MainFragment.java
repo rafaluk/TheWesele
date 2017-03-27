@@ -1,7 +1,6 @@
 package com.example.rafalklat.thewesele;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
@@ -34,7 +33,7 @@ public class MainFragment extends Fragment {
         // TODO: PRZEBUDOWAĆ CAŁY WIDOK
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-        days = (TextView) rootView.findViewById(R.id.days);
+        days = (TextView) rootView.findViewById(R.id.months);
         hours = (TextView) rootView.findViewById(R.id.hours);
         minutes = (TextView) rootView.findViewById(R.id.minutes);
         seconds = (TextView) rootView.findViewById(R.id.seconds);
