@@ -18,7 +18,7 @@ import java.util.Calendar;
  */
 
 public class MainFragment extends Fragment {
-
+//TODO zamiana tekstow na stringi i angielskie
     Button details_button;
     Button contact_button;
     TextView days;
@@ -31,6 +31,7 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //// TODO: PRZEBUDOWAĆ CAŁY WIDOK
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
         days = (TextView) rootView.findViewById(R.id.days);

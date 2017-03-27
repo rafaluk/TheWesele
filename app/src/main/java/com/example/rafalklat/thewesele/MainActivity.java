@@ -54,15 +54,14 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    //TODO refactor nazw
-                    MainFragment tab1Fragment = new MainFragment();
-                    return tab1Fragment;
+                    MainFragment mainFragment = new MainFragment();
+                    return mainFragment;
                 case 1:
-                    ContactFragment tab2Fragment = new ContactFragment();
-                    return tab2Fragment;
+                    ContactFragment contactFragment = new ContactFragment();
+                    return contactFragment;
                 case 2:
-                    DetailsFragment tab3Fragment = new DetailsFragment();
-                    return tab3Fragment;
+                    DetailsFragment detailsFragment = new DetailsFragment();
+                    return detailsFragment;
                 default:
                     return null;
             }
@@ -78,12 +77,11 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    //TODO nazwy sekcji
-                    return "SECTION 1";
+                    return "ODLICZANIE";
                 case 1:
-                    return "SECTION 2";
+                    return "O IMPREZIE";
                 case 2:
-                    return "SECTION 3";
+                    return "KONTAKT";
             }
             return null;
         }
