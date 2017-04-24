@@ -46,20 +46,11 @@ public class MainFragment extends Fragment {
             public void onTick(long millisUntilFinished) {
                 //TODO zamienic na miesiace, a nie dni
 
-                Calendar roznica = Calendar.getInstance();
-                roznica.setTimeInMillis(millisUntilFinished);
-
-//                Log.d("left: ",Integer.toString(miechy)+"mc, "+Integer.toString(dniechy)+"d, "+Integer.toString(godzinki)+"h.");
-//TODO sprawdzic, ktory sposob jest wydajniejszy
-                months.setText(Integer.toString(roznica.get(Calendar.MONTH)));
-                days.setText(Integer.toString(roznica.get(Calendar.DAY_OF_MONTH)));
-                hours.setText(Integer.toString(roznica.get(Calendar.HOUR_OF_DAY)));
-                minutes.setText(Integer.toString(roznica.get(Calendar.MINUTE)));
-                seconds.setText(Integer.toString(roznica.get(Calendar.SECOND)));
-//                days.setText("" + (millisUntilFinished / 1000 / 60 / 60 / 24));
-//                hours.setText("" + (millisUntilFinished / 1000 / 60 / 60) % 24);
-//                minutes.setText("" + (millisUntilFinished / 1000 / 60) % 60);
-//                seconds.setText("" + (millisUntilFinished / 1000) % 60);
+                months.setText("" + (int)Math.floor(millisUntilFinished / 1000 / 60 / 60 / 24 / 31));
+                days.setText("" + (millisUntilFinished / 1000 / 60 / 60 / 24) % 31);
+                hours.setText("" + (millisUntilFinished / 1000 / 60 / 60) % 24);
+                minutes.setText("" + (millisUntilFinished / 1000 / 60) % 60);
+                seconds.setText("" + (millisUntilFinished / 1000) % 60);
             }
 
             public void onFinish() {

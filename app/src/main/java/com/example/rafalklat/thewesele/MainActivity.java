@@ -20,7 +20,7 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
-
+//TODO splash screen
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
 

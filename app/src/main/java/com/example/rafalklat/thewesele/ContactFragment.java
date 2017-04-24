@@ -15,7 +15,7 @@ import android.widget.ImageView;
  */
 
 public class ContactFragment extends Fragment {
-
+//TODO znaleźć tło płotowe
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
