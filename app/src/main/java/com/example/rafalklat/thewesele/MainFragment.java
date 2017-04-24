@@ -18,7 +18,8 @@ import java.util.Calendar;
  */
 
 public class MainFragment extends Fragment {
-//TODO zamiana tekstow na stringi i angielskie
+//TODO zamiana tekstow na stringi
+//TODO angielski
     Button details_button;
     Button contact_button;
     TextView months;
@@ -34,7 +35,7 @@ public class MainFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
         Calendar weddingTime = Calendar.getInstance();
-        weddingTime.set(2017, 7, 12, 18, 0, 0); //miesiac -1, godzina +1
+        weddingTime.set(2017, 7, 12, 17, 0, 0); //miesiac -1, godzina +1
 
         months = (TextView) rootView.findViewById(R.id.months);
         days = (TextView) rootView.findViewById(R.id.days);

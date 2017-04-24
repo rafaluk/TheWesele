@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <ImageView
@@ -20,11 +20,50 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:text="mapki\nprezenty\nsala weselna\no aplikacji" />
+                android:text="Mapka do kościoła"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                style="@style/DetailsButton"
+                android:id="@+id/churchMap"
+
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mapka na wesele"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                style="@style/DetailsButton"
+                android:id="@+id/partyMap"
+                />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="prezenty!"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                style="@style/DetailsButton"
+                android:id="@+id/gifts"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="o aplikacji"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                style="@style/DetailsButton"
+                android:id="@+id/about"
+                />
+
+
         </LinearLayout>
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
