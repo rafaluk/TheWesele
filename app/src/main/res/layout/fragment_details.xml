@@ -56,6 +56,16 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Gdzie i kiedy?"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                style="@style/DetailsButton"
+                android:id="@+id/whereAndWhen"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="o aplikacji"
                 android:layout_margin="10dp"
                 android:layout_gravity="center"

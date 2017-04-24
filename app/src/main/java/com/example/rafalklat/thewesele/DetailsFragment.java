@@ -16,6 +16,7 @@ public class DetailsFragment extends Fragment {
     Button churchMap;
     Button partyMap;
     Button gifts;
+    Button whereAndWhen;
 
     //wspolrzedne kosciola Michala Archaniola
     String churchCoordinates = "Kościół Parafii św. Michała Archanioła w Płońsku";
@@ -34,6 +35,7 @@ public class DetailsFragment extends Fragment {
         churchMap = (Button) rootView.findViewById(R.id.churchMap);
         partyMap = (Button) rootView.findViewById(R.id.partyMap);
         gifts = (Button) rootView.findViewById(R.id.gifts);
+        whereAndWhen = (Button) rootView.findViewById(R.id.whereAndWhen);
 
         churchMap.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +58,16 @@ public class DetailsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 DialogFragment giftsDialog = new GiftsDialogFragment();
-                giftsDialog.show(getFragmentManager(), "missiles");
+                giftsDialog.show(getFragmentManager(), "gifts");
+
+            }
+        });
+
+        whereAndWhen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment whereAndWhenDialog = new WhereAndWhenDialogFragment();
+                whereAndWhenDialog.show(getFragmentManager(), "whereAndWhen");
 
             }
         });
