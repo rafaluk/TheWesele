@@ -10,27 +10,29 @@
     <string name="groom_phone">664 495 049</string>
 
     //popupy
-    <string name="gift_popup">Kochani Goście,
-        \n\nuprzejmie Was prosimy o niekupowanie nam kwiatków!
-        \n\nDwa dni po weselu wyruszamy w podróż poślubną, więc i tak się nimi nie nacieszymy.
-        Zamiast tego będziemy wdzięczni za butelkę dobrego wina, tak aby rozweselić te najbliższe 90 lat,
-        które ze sobą spędzimy. :)
+    <string name="gift_popup">Dear Guests,
+        \n\nwe kindly ask you not to give us flowers!
+        \n\nTwo days after the wedding, we head out to our honeymoon,
+        \nso we won't look after them anyway.
+        \nInsted we'd rather have a bottle of tasty wine, so as to cheer up the next 90 years,
+        we will spend with each other. :)
     </string>
-    <string name="where_popup">\n12 sierpnia 2017 roku
-        \no godz. 17:00
-        \nodbędzie się ślub
-        \nw Kościele Parafii św. Michała Archanioła
-        \nprzy ul. Płockiej 17 w Płońsku.
-        \n\nJeśli dostałeś/aś od nas
-        \n\nodpowiednie zaproszenie,
-        \nto od razu po ślubie widzimy się
-        \nw sali weselnej
+    <string name="where_popup">\n12th August 2017
+        \nat 17:00
+        \nothere will be a wedding
+        \nin Church of The Holy Michael Archengel
+        \n(Kościół Parafii św. Michała Archanioła)
+        \nPłockiej Street 17, Płońsk.
+        \n\nIf you had been given from us
+        \n\na proper invitation,
+        \nwe will celebrate the wedding together right after the ceremony
+        \nin a wedding hall
         \nPERŁOWY DWÓR
         \nNowe Olszyny 29A, Załuski.
     </string>
-    <string name="popup_close">ZAMKNIJ</string>
+    <string name="popup_close">CLOSE</string>
 
     //literały z dupy
-    <string name="call_us">Zadzwoń do nas!</string>
+    <string name="call_us">Call us!</string>
 
 </resources>

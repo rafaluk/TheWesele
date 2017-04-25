@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">The Wesele</string>
+
+    //imiona
+    <string name="bride_name">Asia</string>
+    <string name="groom_name">Rafał</string>
+
+    //telefony
+    <string name="bride_phone">781 622 879</string>
+    <string name="groom_phone">664 495 049</string>
+
+    //popupy
+    <string name="gift_popup">Kochani Goście,
+        \n\nuprzejmie Was prosimy o niekupowanie nam kwiatków!
+        \n\nDwa dni po weselu wyruszamy w podróż poślubną, więc i tak się nimi nie nacieszymy.
+        Zamiast tego będziemy wdzięczni za butelkę dobrego wina, tak aby rozweselić te najbliższe 90 lat,
+        które ze sobą spędzimy. :)
+    </string>
+    <string name="where_popup">\n12 sierpnia 2017 roku
+        \no godz. 17:00
+        \nodbędzie się ślub
+        \nw Kościele Parafii św. Michała Archanioła
+        \nprzy ul. Płockiej 17 w Płońsku.
+        \n\nJeśli dostałeś/aś od nas
+        \n\nodpowiednie zaproszenie,
+        \nto od razu po ślubie widzimy się
+        \nw sali weselnej
+        \nPERŁOWY DWÓR
+        \nNowe Olszyny 29A, Załuski.
+    </string>
+    <string name="popup_close">ZAMKNIJ</string>
+
+    //literały z dupy
+    <string name="call_us">Zadzwoń do nas!</string>
+
+</resources>
