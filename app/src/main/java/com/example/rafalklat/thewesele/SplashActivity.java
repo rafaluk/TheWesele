@@ -12,9 +12,25 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        Thread timer = new Thread() {
+            public void run() {
+                try {
+                    //jak długo wyświetlamy splash screen?
+                    sleep(1500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                }
+            }
+        };
+        timer.start();
+    }
+    @Override
+    protected void onPause()
+    {
+        super.onPause();
         finish();
     }
 }

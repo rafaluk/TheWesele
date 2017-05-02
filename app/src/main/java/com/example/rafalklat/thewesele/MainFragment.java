@@ -34,7 +34,8 @@ public class MainFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
         Calendar weddingTime = Calendar.getInstance();
-        weddingTime.set(2017, 7, 12, 17, 0, 0); //miesiac -1
+        //.set(rok, miesiąc, dzień, godzina, minuta, sekunda)
+        weddingTime.set(2017, 7, 12, 17, 0, 0); //miesiac -1 (np. jak wesele w sierpniu, to wpisujemy lipiec)
 
         months = (TextView) rootView.findViewById(R.id.months);
         days = (TextView) rootView.findViewById(R.id.days);

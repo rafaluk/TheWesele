@@ -5,6 +5,4 @@
             android:gravity="center"
             android:src="@drawable/projekt"/>
     </item>
-
-
 </layer-list>

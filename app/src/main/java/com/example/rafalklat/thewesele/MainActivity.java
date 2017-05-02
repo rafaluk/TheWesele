@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar actionBar = (Toolbar) findViewById(R.id.actionBar);
         setSupportActionBar(actionBar);
         actionBar.setLogo(R.mipmap.ic_launcher);
-        //actionBar.setBackgroundColor(Color.parseColor("#EC407A"));
-        // getSupportActionBar().setLogo(R.mipmap.ic_launcher);
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
