@@ -1,23 +1,35 @@
 <resources>
-    <string name="app_name">The Wesele</string>
+    <string name="app_name">
+        The Wesele
+    </string>
 
     //imiona
-    <string name="bride_name">Asia</string>
-    <string name="groom_name">Rafał</string>
+    <string name="bride_name">
+        Asia
+    </string>
+    <string name="groom_name">
+        Rafał
+    </string>
 
     //telefony
-    <string name="bride_phone">781 622 879</string>
-    <string name="groom_phone">664 495 049</string>
+    <string name="bride_phone">
+        +48 781 622 879
+    </string>
+    <string name="groom_phone">
+        +48 664 495 049
+    </string>
 
     //popupy
-    <string name="gift_popup">Dear Guests,
+    <string name="gift_popup">
+        Dear Guests,
         \n\nwe kindly ask you not to give us flowers!
         \n\nTwo days after the wedding, we head out to our honeymoon,
-        \nso we won't look after them anyway.
-        \nInsted we'd rather have a bottle of tasty wine, so as to cheer up the next 90 years,
+        \nso we won\'t look after them anyway.
+        \nInsted we\'d rather have a bottle of tasty wine, so as to cheer up the next 90 years,
         we will spend with each other. :)
     </string>
-    <string name="where_popup">\n12th August 2017
+    <string name="where_popup">
+        \n12th August 2017
         \nat 17:00
         \nothere will be a wedding
         \nin Church of The Holy Michael Archengel
@@ -30,9 +42,22 @@
         \nPERŁOWY DWÓR
         \nNowe Olszyny 29A, Załuski.
     </string>
-    <string name="popup_close">CLOSE</string>
+    <string name="popup_close">
+        CLOSE
+    </string>
+     <string name="about_popup">
+        Do you like this app?
+        \nDo you want to have it on YOUR wedding?
+        \nOr maybe you have some suggestions?
+        \n\nJust contact me! :)
+        \nrafal.klat@gmail.com
+        \n\nCopyright &#169; All rights reserved.
+        \nApp made from scratch by Rafał Klat
+    </string>
 
     //literały z dupy
-    <string name="call_us">Call us!</string>
+    <string name="call_us">
+        Call us!
+    </string>
 
 </resources>

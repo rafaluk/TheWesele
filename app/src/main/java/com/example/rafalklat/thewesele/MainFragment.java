@@ -20,8 +20,7 @@ import java.util.Calendar;
 public class MainFragment extends Fragment {
 //TODO zamiana tekstow na stringi
 //TODO angielski
-    Button details_button;
-    Button contact_button;
+
     TextView months;
     TextView days;
     TextView hours;
@@ -35,7 +34,7 @@ public class MainFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
         Calendar weddingTime = Calendar.getInstance();
-        weddingTime.set(2017, 7, 12, 17, 0, 0); //miesiac -1, godzina +1
+        weddingTime.set(2017, 7, 12, 17, 0, 0); //miesiac -1
 
         months = (TextView) rootView.findViewById(R.id.months);
         days = (TextView) rootView.findViewById(R.id.days);
@@ -43,10 +42,8 @@ public class MainFragment extends Fragment {
         minutes = (TextView) rootView.findViewById(R.id.minutes);
         seconds = (TextView) rootView.findViewById(R.id.seconds);
 
-        new CountDownTimer(weddingTime.getTimeInMillis() - Calendar.getInstance().getTimeInMillis(), 1000) {
+        new CountDownTimer(WEDDING_TIME - Calendar.getInstance().getTimeInMillis(), 1000) {
             public void onTick(long millisUntilFinished) {
-                //TODO zamienic na miesiace, a nie dni
-
                 months.setText("" + (int)Math.floor(millisUntilFinished / 1000 / 60 / 60 / 24 / 31));
                 days.setText("" + (millisUntilFinished / 1000 / 60 / 60 / 24) % 31);
                 hours.setText("" + (millisUntilFinished / 1000 / 60 / 60) % 24);

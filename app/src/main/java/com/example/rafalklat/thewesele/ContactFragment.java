@@ -22,10 +22,8 @@ public class ContactFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_contact, container, false);
 
-        View asiniTel = (RelativeLayout) rootView.findViewById(R.id.asiniTel);
-        View rafiniTel = (RelativeLayout) rootView.findViewById(R.id.rafiniTel);
-//        ImageView asiniMail = (ImageView) rootView.findViewById(R.id.asiniMail);
-//        ImageView rafiniMail = (ImageView) rootView.findViewById(R.id.rafiniMail);
+        View asiniTel = rootView.findViewById(R.id.asiniTel);
+        View rafiniTel = rootView.findViewById(R.id.rafiniTel);
 
         //TODO telefony też jakos publicznie pobierac z main activity
         asiniTel.setOnClickListener(new View.OnClickListener() {

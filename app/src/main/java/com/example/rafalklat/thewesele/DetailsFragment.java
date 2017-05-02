@@ -13,10 +13,11 @@ import android.widget.Button;
 
 public class DetailsFragment extends Fragment {
 
-    Button churchMap;
-    Button partyMap;
-    Button gifts;
-    Button whereAndWhen;
+    Button churchMapButton;
+    Button partyMapButton;
+    Button giftsButton;
+    Button whereAndWhenButton;
+    Button aboutButton;
 
     //wspolrzedne kosciola Michala Archaniola
     String churchCoordinates = "Kościół Parafii św. Michała Archanioła w Płońsku";
@@ -32,12 +33,13 @@ public class DetailsFragment extends Fragment {
         final Uri churchCoordinatesUri = Uri.parse("http://maps.google.com/maps?daddr="+churchCoordinates);
         final Uri partyCoordinatesUri = Uri.parse("http://maps.google.com/maps?daddr="+partyCoordinates);
 
-        churchMap = (Button) rootView.findViewById(R.id.churchMap);
-        partyMap = (Button) rootView.findViewById(R.id.partyMap);
-        gifts = (Button) rootView.findViewById(R.id.gifts);
-        whereAndWhen = (Button) rootView.findViewById(R.id.whereAndWhen);
+        churchMapButton = (Button) rootView.findViewById(R.id.churchMap);
+        partyMapButton = (Button) rootView.findViewById(R.id.partyMap);
+        giftsButton = (Button) rootView.findViewById(R.id.gifts);
+        whereAndWhenButton = (Button) rootView.findViewById(R.id.whereAndWhen);
+        aboutButton = (Button) rootView.findViewById(R.id.about);
 
-        churchMap.setOnClickListener(new View.OnClickListener() {
+        churchMapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, churchCoordinatesUri);
@@ -45,7 +47,7 @@ public class DetailsFragment extends Fragment {
             }
         });
 
-        partyMap.setOnClickListener(new View.OnClickListener() {
+        partyMapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, partyCoordinatesUri)
@@ -54,20 +56,29 @@ public class DetailsFragment extends Fragment {
             }
         });
 
-        gifts.setOnClickListener(new View.OnClickListener() {
+        giftsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogFragment giftsDialog = new GiftsDialogFragment();
-                giftsDialog.show(getFragmentManager(), "gifts");
+                giftsDialog.show(getFragmentManager(), "giftsButton");
 
             }
         });
 
-        whereAndWhen.setOnClickListener(new View.OnClickListener() {
+        whereAndWhenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogFragment whereAndWhenDialog = new WhereAndWhenDialogFragment();
-                whereAndWhenDialog.show(getFragmentManager(), "whereAndWhen");
+                whereAndWhenDialog.show(getFragmentManager(), "whereAndWhenButton");
+
+            }
+        });
+
+        aboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment aboutAppDialog = new AboutDialogFragment();
+                aboutAppDialog.show(getFragmentManager(), "aboutButton");
 
             }
         });
