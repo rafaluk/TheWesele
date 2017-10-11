@@ -13,12 +13,8 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-/**
- * Created by marekklat on 27.03.2017.
- */
 
 public class MainFragment extends Fragment {
-//TODO zamiana tekstow na stringi
 //TODO angielski
 
     TextView months;
@@ -35,7 +31,7 @@ public class MainFragment extends Fragment {
 
         Calendar weddingTime = Calendar.getInstance();
         //.set(rok, miesiąc, dzień, godzina, minuta, sekunda)
-        weddingTime.set(2017, 7, 12, 17, 0, 0); //miesiac -1 (np. jak wesele w sierpniu, to wpisujemy lipiec)
+        weddingTime.set(2017, 12, 12, 17, 0, 0); //miesiac -1 (np. jak wesele w sierpniu, to wpisujemy lipiec)
 
         months = (TextView) rootView.findViewById(R.id.months);
         days = (TextView) rootView.findViewById(R.id.days);

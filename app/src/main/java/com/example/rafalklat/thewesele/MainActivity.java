@@ -1,26 +1,16 @@
 package com.example.rafalklat.thewesele;
 
-import android.app.ActionBar;
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.CountDownTimer;
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-
-import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
-//TODO splash screen
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
 

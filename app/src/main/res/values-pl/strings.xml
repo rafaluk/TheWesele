@@ -3,7 +3,7 @@
         The Wesele
     </string>
 
-    //imiona
+    <!--imiona-->
     <string name="bride_name">
         Asia
     </string>
@@ -11,7 +11,7 @@
         Rafał
     </string>
 
-    //telefony
+    <!--telefony-->
     <string name="bride_phone">
         781 622 879
     </string>
@@ -19,7 +19,7 @@
         664 495 049
     </string>
 
-    //popupy
+    <!--popupy-->
     <string name="gift_popup">
         Kochani Goście,
         \n\nuprzejmie Was prosimy o niekupowanie nam kwiatków!
@@ -47,13 +47,14 @@
         Podoba Ci się aplikacja?
         \nChcesz mieć taką na swoim weselu?
         \nA może masz jakieś sugestie?
-        \n\nSkontaktuj się ze mną! :)
-        \nrafal.klat@gmail.com
-        \n\nCopyright &#169; All rights reserved.
-        \nApp made from scratch by Rafał Klat
+        \nSkontaktuj się ze mną! :)
+        \n\nrafal.klat@gmail.com
+        \n\nCopyright &#169; 2017 Rafał Klat
+        \nAll rights reserved.
+        \nApp made from scratch by Rafał Klat.
     </string>
 
-    //literały z dupy
+    <!--literały z dupy-->
     <string name="call_us">
         Zadzwoń do nas!
     </string>
